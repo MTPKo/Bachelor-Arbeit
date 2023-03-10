@@ -79,3 +79,38 @@ medlinetanorm
 FROM ke_stage.ba_small_corpus
 GROUP BY medlinetanorm
 ORDER BY COUNT(medlinetanorm) DESC
+
+
+
+----------------------------------
+ SELECT test_corpus_classes.class,
+    test_corpus_classes.record_id,
+    db_tokenized.token_dbrecordid,
+    db_tokenized.collectiontitle_token,
+    db_tokenized.abstract_token,
+    db_tokenized.title_token,
+    test_corpus.dbrecordid,
+    test_corpus.doi,
+    test_corpus.doctype,
+    test_corpus.articlelangage,
+    test_corpus.medlinetanorm,
+    test_corpus.source,
+    test_corpus.collectiontitle,
+    test_corpus.publisher,
+    test_corpus.isbn,
+    test_corpus.eissn AS eisnn,
+    test_corpus.issn,
+    test_corpus.pissn,
+    test_corpus.event,
+    test_corpus.institution,
+    test_corpus.database,
+    test_corpus.subdatabase,
+    test_corpus.keywords,
+    test_corpus.mesh,
+    test_corpus.chem,
+    test_corpus.title,
+    test_corpus.abstract
+   FROM ke_stage.test_corpus
+     JOIN ke_stage.test_corpus_classes ON test_corpus.dbrecordid = test_corpus_classes.record_id
+     JOIN ke_stage.db_tokenized ON test_corpus.dbrecordid = db_tokenized.token_dbrecordid;
+	 
