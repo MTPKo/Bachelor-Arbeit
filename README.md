@@ -1,7 +1,12 @@
+## Info:
+
+Code written until 31.03.2023 is saved in Folder: BA_Abgabe
+Code which may be altered after 31.03.2023 is saved in: BA_Nachabgabe
+
 ## Bachelor Arbeit:
  
 Redo and improve the LIVIVO's document classification
-
+ 
 ## Infos
 | was | info |
 | ------ | ------ |
@@ -10,6 +15,7 @@ Redo and improve the LIVIVO's document classification
 | Gutachter | KUF |
 | Betreuer | KUF, KLI |
 |Arbeitszeit | ca 2 Tage |
+
 
 ## Klassen
 - Medizin
